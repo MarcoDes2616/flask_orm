@@ -1,0 +1,23 @@
+{% extends "./base.html" %}
+
+{% block titulo %}
+<title>Proyectos</title>
+    {% endblock %}
+
+{% block contenido %}
+
+<table>
+    <tr>
+        <th>Titulo</th>
+        <th>Descripcion</th>
+    </tr>
+    {% for p in projects %}
+    <tr>
+        <td>{{p.titulo}}</td>
+        <td>{{p.descripcion}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+    {% endblock %}
