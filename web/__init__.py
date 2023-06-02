@@ -1,6 +1,7 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
+
 app = Flask(__name__)
 
 #CONFIGURACION DE BBDD
@@ -15,4 +16,5 @@ app.register_blueprint(base)
 app.register_blueprint(project)
 
 #cargar todas las consultas
-db.create_all()
+with app.app_context():
+    db.create_all()

@@ -1,0 +1,18 @@
+{% extends "./base.html" %}
+
+{% block titulo %}
+<title>Crear Proyectos</title>
+{% endblock %}
+
+{% block contenido %}
+<h2>Insertar Proyectos</h2>
+
+<form action="{{url_for('project.insert')}}" method="POST">
+    <label for="title">Titulo</label>
+    <input type="text" id="title", name="title">
+    <label for="description">Descripcion</label>
+    <input type="text" id="description", name="description">
+    <button>Save</button>
+</form>
+
+{% endblock %}

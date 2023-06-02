@@ -1,11 +1,16 @@
-class Project:
-    def __init__(self, titulo, descripcion):
-        self.titulo = titulo
-        self.descripcion = descripcion
+from web import db
+
+class Project(db.Model):
+    __tablename__ = "projects"
+    id = db.Column(db.Integer, primary_key = True)
+    title = db.Column(db.String(100))
+    description = db.Column(db.Text)
+
+    def __init__(self, title, description):
+        self.title = title
+        self.description = description
+    
+    def __repr__(self):
+        return f'Project {self.title}'
 
 
-project1 = Project('Proyecto 01', 'Descripción del proyecto 01')
-project2 = Project('Proyecto 02', 'Descripción del proyecto 02')
-project3 = Project('Proyecto 03', 'Descripción del proyecto 03')
-
-PROJECTS = [project1, project2, project3]

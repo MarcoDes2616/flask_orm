@@ -11,12 +11,14 @@
         <th>Titulo</th>
         <th>Descripcion</th>
     </tr>
-    {% for p in projects %}
+    {% for p in results %}
     <tr>
-        <td>{{p.titulo}}</td>
-        <td>{{p.descripcion}}</td>
+        <td>{{p.title}}</td>
+        <td>{{p.description}}</td>
+        <td><a href="{{url_for('project.edit', id=p.id)}}">Editar</a></td>
+        <td><a href="">Eliminar</a></td>
     </tr>
-    {% endfor %}
+    {% endfor %} 
 </table>
 
 

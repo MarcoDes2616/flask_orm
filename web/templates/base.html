@@ -9,9 +9,11 @@
 </head>
 <body>
     <header>
-        <a href={{url_for("base.index")}}  >Home</a>
-        <a href={{url_for("base.portafolio")}}  >Portafolio</a>
-        <a href={{url_for("base.contacto")}}  >Contacto</a>
+        <a href={{url_for("base.index")}}>Home</a>
+        <a href={{url_for("base.portafolio")}}>Portafolio</a>
+        <a href={{url_for("base.contacto")}}>Contacto</a>
+        <a href={{url_for("project.index")}}>Proyectos</a>
+        <a href={{url_for('project.create')}}>Crear nuevo</a>
         <hr>
     </header>
     {% block contenido %}

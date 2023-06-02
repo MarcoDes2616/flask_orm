@@ -2,7 +2,7 @@ class Config:
     DEBUG = True
     TESTING = True
     #configuracion a BBDD
-    SQLALCHEMY_DATABASE_URI = 'mysql+pymsql://root:root2616@localhost:3300/flask_db'
+    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:root2616@localhost:3300/flask_db'
 
 
 class ProductionConfig(Config):
